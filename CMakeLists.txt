@@ -3,4 +3,4 @@ project(labHilbertCurve)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(labHilbertCurve main.cpp)
+add_executable(labHilbertCurve main.cpp gif.h)
