@@ -47,46 +47,6 @@ void go(vector<uint8_t> &frame,
 }
 
 
-/**void goUp(vector<uint8_t> &frame,
-          int size,
-          pair<int, int> &position,
-          vector<uint8_t> color = vector<uint8_t>(4, 0),
-          int thickness = 2,
-          int length = 10) {
-    go(frame, size, position, 0, std::move(color), thickness, length);
-}
-
-
-void goDown(vector<uint8_t> &frame,
-            int size,
-            pair<int, int> &position,
-            vector<uint8_t> color = vector<uint8_t>(4, 0),
-            int thickness = 2,
-            int length = 10) {
-    go(frame, size, position, 1, std::move(color), thickness, length);
-}
-
-
-void goRight(vector<uint8_t> &frame,
-             int size,
-             pair<int, int> &position,
-             vector<uint8_t> color = vector<uint8_t>(4, 0),
-             int thickness = 2,
-             int length = 10) {
-    go(frame, size, position, 2, std::move(color), thickness, length);
-}
-
-
-void goLeft(vector<uint8_t> &frame,
-            int size,
-            pair<int, int> &position,
-            vector<uint8_t> color = vector<uint8_t>(4, 0),
-            int thickness = 2,
-            int length = 10) {
-    go(frame, size, position, 3, std::move(color), thickness, length);
-}**/
-
-
 void turnRight(int &facing) {
     if (facing == 0)
         facing = 3;
@@ -195,16 +155,6 @@ int main() {
     GifBegin(&g, "test.gif", canvas_size, canvas_size, delay);
     GifWriteFrame(&g, frame.data(), canvas_size, canvas_size, delay);
     hilbert_a(frame, canvas_size, position, facing, depth);
-//    go(frame, canvas_size, position, facing);
-//    GifWriteFrame(&g, frame.data(), canvas_size, canvas_size, delay);
-//    go(frame, canvas_size, position, facing);
-//    GifWriteFrame(&g, frame.data(), canvas_size, canvas_size, delay);
-//    turnLeft(facing);
-//    go(frame, canvas_size, position, facing);
-//    GifWriteFrame(&g, frame.data(), canvas_size, canvas_size, delay);
-//    turnRight(facing);
-//    go(frame, canvas_size, position, facing);
-//    GifWriteFrame(&g, frame.data(), canvas_size, canvas_size, delay);
 
     GifEnd(&g);
     return 0;
